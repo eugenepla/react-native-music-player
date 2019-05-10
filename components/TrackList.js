@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, StyleSheet} from 'react-native'
+import { StyleSheet, ScrollView } from 'react-native'
 
 import Track from './Track'
 
@@ -7,10 +7,11 @@ export default class TrackList extends Component {
   render() {
     const data = this.props.data
     return (
-      <View style={styles.container}>
-        {data.map((item) => {
+      <ScrollView style={styles.container}>
+        {data.map(item => {
           return (
             <Track
+              style={styles.trackContainer}
               data={data}
               key={item.id}
               artist={item.artist}
@@ -19,13 +20,13 @@ export default class TrackList extends Component {
             />
           )
         })}
-      </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%'
+    backgroundColor: '#FFFFF0'
   }
 })

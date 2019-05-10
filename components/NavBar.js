@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import {View, StyleSheet} from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import NavItem from './NavItem'
 
 export default class NavBar extends Component {
   render() {
     return (
-      <View style={styles.navBar} className='navbar'>
+      <View style={styles.navBar} className="navbar">
         <NavItem text={1} />
         <NavItem text={2} />
         <NavItem text={3} />
@@ -20,10 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    height: 50,
-    backgroundColor: 'powderblue'
-  },
-  item: {
-    
+    height: '10%',
+    backgroundColor: '#022140'
   }
 })

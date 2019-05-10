@@ -4,7 +4,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "devtools": "react-devtools"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -16,7 +17,8 @@
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
     "eslint": "^5.16.0",
-    "eslint-config-equimper": "^2.2.2"
+    "eslint-config-equimper": "^2.2.2",
+    "react-devtools": "^3.6.1"
   },
   "private": true
 }

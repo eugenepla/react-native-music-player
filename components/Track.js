@@ -1,20 +1,20 @@
 import React from 'react'
-import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
 export default function Track(props) {
   return (
-    <TouchableOpacity 
+    <TouchableOpacity
       onPress={() => Actions.player(props)}
       style={styles.container}
     >
       <Image
-        style={{width: 75, height: 75}}
-        source={{uri: props.cover}}
-      />  
+        style={{ width: 125, height: 120 }}
+        source={{ uri: props.cover }}
+      />
       <View style={styles.trackText}>
-        <Text>{props.song}</Text>
-        <Text>{props.artist}</Text>
+        <Text style={styles.songTitle}>{props.song}</Text>
+        <Text style={styles.artistTitle}>{props.artist}</Text>
       </View>
     </TouchableOpacity>
   )
@@ -25,7 +25,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   trackText: {
+    width: '70%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#FAFAD2'
+  },
+  songTitle: {
+    textAlign: 'center',
+    color: '#123C69',
+    fontSize: 18,
+    fontWeight: '600'
+  },
+  artistTitle: {
+    textAlign: 'center',
+    color: '#2D283E',
+    fontSize: 16,
+    fontWeight: 'bold'
   }
 })

@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import React, { Component } from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default class NavItem extends Component {
   render() {
-    const {text} = this.props
+    const { text } = this.props
     return (
       <View style={styles.navItem}>
         <Text style={styles.text}>{text}</Text>
@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   text: {
-    color: 'green'
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#FFE400'
   }
 })

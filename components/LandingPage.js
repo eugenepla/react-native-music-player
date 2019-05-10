@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, StyleSheet} from 'react-native'
+import { View, StyleSheet } from 'react-native'
 
 import data from '../data'
 import TrackList from './TrackList'
@@ -11,7 +11,7 @@ export default class Main extends Component {
       <View style={styles.page}>
         <TrackList data={data} />
         <NavBar />
-      </View> 
+      </View>
     )
   }
 }
