@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99208cde-e075-44df-a6c8-7eb6f2f87419" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/MusicPlayerExpo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MusicPlayerExpo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerPage/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayerPage/Cover.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Cover.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayerPage/Details.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlayerPage/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LandingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Track.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TrackList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
-    <option name="y" value="27" />
-    <option name="width" value="954" />
+    <option name="x" value="45" />
+    <option name="y" value="83" />
+    <option name="width" value="1107" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
@@ -28,8 +35,19 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MusicPlayerExpo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MusicPlayerExpo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -62,20 +80,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="27" width="954" height="1000" extended-state="0" />
+    <frame x="45" y="83" width="1107" height="1000" extended-state="0" />
     <layout>
-      <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.4017186" />
+      <window_info id="Build Variants" side_tool="true" />
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.35249764" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Logcat" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info active="true" anchor="bottom" id="Event Log" order="3" side_tool="true" visible="true" weight="0.3295063" />
+      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />

@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 5,
-    artist: 'Rammstein',
+    artist: 'RAMMSTEIN',
     song: 'Wollt ihr das Bett in Flammen sehen?',
     cover: 'http://rock-nation.ru/upload/images/albums/532.jpg',
     url:
@@ -41,11 +41,11 @@ const data = [
   },
   {
     id: 6,
-    artist: 'Димна Суміш',
-    song: 'Кожної весни',
-    cover: 'https://cdn-41.myzcloud.me/img/70/2328880/40068487.jpg',
+    artist: 'RAMMSTEIN',
+    song: 'Los',
+    cover: 'http://rock-nation.ru/upload/images/albums/535.jpg',
     url:
-      'http://mg15.i.ua/g/286349ca7344c3bd16d7df1c799ca1a1/5cd539ba/music21/3/9/641993'
+      'http://rock-nation.ru/upload/mp3/Rammstein/2004%20-%20Reise,Reise/05.%20Los.mp3'
   }
 ]
 

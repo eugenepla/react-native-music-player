@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 
 import data from '../data'
 import TrackList from './TrackList'
-import NavBar from './NavBar'
+import NavBar from '../components/NavBar'
 
 export default class Main extends Component {
   render() {

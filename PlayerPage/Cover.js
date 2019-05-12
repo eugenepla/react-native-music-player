@@ -11,7 +11,7 @@ export default function Cover(props) {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 80
+    marginTop: 10
   },
   image: {
     height: 200,

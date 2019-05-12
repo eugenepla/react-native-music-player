@@ -5,7 +5,9 @@ import { Actions } from 'react-native-router-flux'
 export default function Track(props) {
   return (
     <TouchableOpacity
-      onPress={() => Actions.player(props)}
+      onPress={() =>
+        Actions.player({ ...props, title: `${props.artist} - ${props.song}` })
+      }
       style={styles.container}
     >
       <Image
@@ -28,7 +30,7 @@ const styles = StyleSheet.create({
     width: '70%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FAFAD2'
+    backgroundColor: '#EDEAE5'
   },
   songTitle: {
     textAlign: 'center',

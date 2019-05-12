@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import { Dimensions, StyleSheet, View } from 'react-native'
-import { Asset, Audio, Font } from 'expo'
+import { StyleSheet, View } from 'react-native'
+import { Asset, Audio } from 'expo'
 
 import Cover from './Cover'
 import Details from './Details'
 import Buttons from './Buttons'
+import NavBar from '../components/NavBar'
+import { Actions } from 'react-native-router-flux'
 
-const { width: DEVICE_WIDTH, height: DEVICE_HEIGHT } = Dimensions.get('window')
-const BACKGROUND_COLOR = '#FFFFFF'
-const FONT_SIZE = 16
 const LOADING_STRING = 'Loading...'
 
-export default class Player extends Component {
+class Player extends Component {
   constructor(props) {
     super(props)
     this.index = 0
@@ -27,7 +26,6 @@ export default class Player extends Component {
       isPlaying: false,
       isBuffering: false,
       isLoading: true,
-      fontLoaded: false,
       volume: 1.0,
       portrait: null
     }
@@ -43,12 +41,6 @@ export default class Player extends Component {
       playThroughEarpieceAndroid: true,
       staysActiveInBackground: true
     })
-    ;(async () => {
-      await Font.loadAsync({
-        roboto: require('../assets/fonts/Roboto.ttf')
-      })
-      this.setState({ fontLoaded: true })
-    })()
 
     this._loadNewPlaybackInstance(false)
   }
@@ -155,40 +147,6 @@ export default class Player extends Component {
     }
   }
 
-  _onSeekSliderValueChange = value => {
-    if (this.playbackInstance != null && !this.isSeeking) {
-      this.isSeeking = true
-      this.shouldPlayAtEndOfSeek = this.state.shouldPlay
-      this.playbackInstance.pauseAsync()
-    }
-  }
-
-  _onSeekSliderSlidingComplete = async value => {
-    if (this.playbackInstance != null) {
-      this.isSeeking = false
-      const seekPosition = value * this.state.playbackInstanceDuration
-      if (this.shouldPlayAtEndOfSeek) {
-        this.playbackInstance.playFromPositionAsync(seekPosition)
-      } else {
-        this.playbackInstance.setPositionAsync(seekPosition)
-      }
-    }
-  }
-
-  _getSeekSliderPosition() {
-    if (
-      this.playbackInstance != null &&
-      this.state.playbackInstancePosition != null &&
-      this.state.playbackInstanceDuration != null
-    ) {
-      return (
-        this.state.playbackInstancePosition /
-        this.state.playbackInstanceDuration
-      )
-    }
-    return 0
-  }
-
   _getMMSSFromMillis(millis) {
     const totalSeconds = millis / 1000
     const seconds = Math.floor(totalSeconds % 60)
@@ -218,17 +176,15 @@ export default class Player extends Component {
   }
 
   render() {
-    return !this.state.fontLoaded ? (
-      <View />
-    ) : (
+    return (
       <View style={styles.container}>
-        <Cover portrait={this.state.portrait} />
         <Details
           playbackInstanceArtist={this.state.playbackInstanceArtist}
           playbackInstanceName={this.state.playbackInstanceName}
           isBuffering={this.state.isBuffering}
           getTimestamp={this._getTimestamp()}
         />
+        <Cover portrait={this.state.portrait} />
         <Buttons
           isPlaying={this.state.isPlaying}
           isLoading={this.state.isLoading}
@@ -236,10 +192,8 @@ export default class Player extends Component {
           onPlayPausePressed={this._onPlayPausePressed}
           onStopPressed={this._onStopPressed}
           onForwardPressed={this._onForwardPressed}
-          getSeekSliderPosition={this._getSeekSliderPosition()}
-          onSeekSliderValueChange={this._onSeekSliderValueChange}
-          onSeekSliderSlidingComplete={this._onSeekSliderSlidingComplete}
         />
+        <NavBar style={styles.navbar} />
       </View>
     )
   }
@@ -247,11 +201,11 @@ export default class Player extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 3,
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
-    alignSelf: 'stretch',
-    backgroundColor: BACKGROUND_COLOR
+    alignItems: 'center'
   }
 })
+
+export default Player

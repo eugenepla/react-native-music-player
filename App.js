@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Stack, Scene } from 'react-native-router-flux'
-import LandingPage from './components/LandingPage'
+import LandingPage from './TracklistPage/LandingPage'
 import Player from './PlayerPage/Player'
 
 export default class App extends Component {
@@ -8,17 +8,18 @@ export default class App extends Component {
     return (
       <Router
         navigationBarStyle={{
-          backgroundColor: '#FFE400'
+          backgroundColor: '#022140'
         }}
         titleStyle={{
-          color: '#022140',
-          fontSize: 20
+          color: '#FFE400',
+          fontSize: 22
         }}
+        tintColor="#FFE400"
         headerLayoutPreset="center"
       >
         <Stack key="root">
           <Scene key="landingpage" component={LandingPage} title="Tracklist" />
-          <Scene key="player" component={Player} title="Player" />
+          <Scene key="player" component={Player} />
         </Stack>
       </Router>
     )
