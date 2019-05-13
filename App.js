@@ -19,7 +19,16 @@ export default class App extends Component {
       >
         <Stack key="root">
           <Scene key="landingpage" component={LandingPage} title="Tracklist" />
-          <Scene key="player" component={Player} />
+          <Scene
+            navigationBarStyle={{
+              backgroundColor: '#022140'
+            }}
+            titleStyle={{
+              fontSize: 16
+            }}
+            key="player"
+            component={Player}
+          />
         </Stack>
       </Router>
     )

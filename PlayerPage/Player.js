@@ -26,7 +26,6 @@ class Player extends Component {
       isPlaying: false,
       isBuffering: false,
       isLoading: true,
-      volume: 1.0,
       portrait: null
     }
   }
@@ -135,6 +134,11 @@ class Player extends Component {
 
   _onForwardPressed = () => {
     if (this.playbackInstance != null) {
+      Actions.refresh({
+        title: `${this.props.data[this.index + 1].artist} - ${
+          this.props.data[this.index + 1].song
+        }`
+      })
       this._advanceIndex(true)
       this._updatePlaybackInstanceForIndex(this.state.shouldPlay)
     }
@@ -142,6 +146,11 @@ class Player extends Component {
 
   _onBackPressed = () => {
     if (this.playbackInstance != null) {
+      Actions.refresh({
+        title: `${this.props.data[this.index - 1].artist} - ${
+          this.props.data[this.index - 1].song
+        }`
+      })
       this._advanceIndex(false)
       this._updatePlaybackInstanceForIndex(this.state.shouldPlay)
     }

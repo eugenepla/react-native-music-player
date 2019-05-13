@@ -11,7 +11,6 @@ export default function Buttons(props) {
     <View
       style={[
         styles.buttonsContainerBase,
-        styles.buttonsContainerTopRow,
         {
           opacity: props.isLoading ? DISABLED_OPACITY : 1.0
         }
