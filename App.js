@@ -20,11 +20,9 @@ export default class App extends Component {
         <Stack key="root">
           <Scene key="landingpage" component={LandingPage} title="Tracklist" />
           <Scene
-            navigationBarStyle={{
-              backgroundColor: '#022140'
-            }}
             titleStyle={{
-              fontSize: 16
+              fontSize: 16,
+              alignSelf: 'center'
             }}
             key="player"
             component={Player}

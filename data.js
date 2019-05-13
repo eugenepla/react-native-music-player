@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 5,
-    artist: 'RAMMSTEIN',
+    artist: 'Rammstein',
     song: 'Wollt ihr das Bett in Flammen sehen?',
     cover: 'http://rock-nation.ru/upload/images/albums/532.jpg',
     url:
@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: 6,
-    artist: 'RAMMSTEIN',
+    artist: 'Rammstein',
     song: 'Los',
     cover: 'http://rock-nation.ru/upload/images/albums/535.jpg',
     url:

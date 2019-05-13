@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99208cde-e075-44df-a6c8-7eb6f2f87419" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPage/Buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Buttons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerPage/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +14,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="954" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="571" />
+    <option name="y" value="44" />
     <option name="width" value="966" />
     <option name="height" value="1000" />
   </component>
@@ -74,7 +71,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="954" y="27" width="966" height="1000" extended-state="0" />
+    <frame x="571" y="44" width="966" height="1000" extended-state="1" />
     <layout>
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
