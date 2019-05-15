@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Asset, Audio } from 'expo'
+import { Actions } from 'react-native-router-flux'
 
 import Cover from './Cover'
 import Details from './Details'
 import Buttons from './Buttons'
 import NavBar from '../components/NavBar'
-import { Actions } from 'react-native-router-flux'
 
 const LOADING_STRING = 'Loading...'
+const DISABLED_OPACITY = 0.5
 
 class Player extends Component {
   constructor(props) {
     super(props)
     this.index = 0
-    this.isSeeking = false
-    this.shouldPlayAtEndOfSeek = false
     this.playbackInstance = null
     this.state = {
       playbackInstanceArtist: null,
@@ -51,7 +50,7 @@ class Player extends Component {
       this.playbackInstance = null
     }
 
-    const source = { uri: this.props.data[this.index].url }
+    const source = { uri: this.props.data[this.props.id - 1].url }
     const initialStatus = {
       shouldPlay: playing
     }
@@ -78,9 +77,9 @@ class Player extends Component {
       })
     } else {
       this.setState({
-        playbackInstanceArtist: this.props.data[this.index].artist,
-        playbackInstanceName: this.props.data[this.index].song,
-        portrait: this.props.data[this.index].cover,
+        playbackInstanceArtist: this.props.data[this.props.id - 1].artist,
+        playbackInstanceName: this.props.data[this.props.id - 1].song,
+        portrait: this.props.data[this.props.id - 1].cover,
         isLoading: false
       })
     }

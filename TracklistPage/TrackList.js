@@ -13,6 +13,7 @@ export default class TrackList extends Component {
             <Track
               style={styles.trackContainer}
               data={data}
+              id={item.id}
               key={item.id}
               artist={item.artist}
               song={item.song}

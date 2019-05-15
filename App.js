@@ -20,10 +20,7 @@ export default class App extends Component {
         <Stack key="root">
           <Scene key="landingpage" component={LandingPage} title="Tracklist" />
           <Scene
-            titleStyle={{
-              fontSize: 16,
-              alignSelf: 'center'
-            }}
+            titleStyle={{ fontSize: 16, alignSelf: 'center' }}
             key="player"
             component={Player}
           />
