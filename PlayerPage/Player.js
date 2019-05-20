@@ -142,13 +142,13 @@ class Player extends Component {
 
   _onBackPressed = () => {
     if (this.playbackInstance != null) {
+      this._advanceIndex(false)
+      this._updatePlaybackInstanceForIndex(this.state.shouldPlay)
       Actions.refresh({
         title: `${this.props.data[this.index].artist} - ${
           this.props.data[this.index].song
         }`
       })
-      this._advanceIndex(false)
-      this._updatePlaybackInstanceForIndex(this.state.shouldPlay)
     }
   }
 
