@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99208cde-e075-44df-a6c8-7eb6f2f87419" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PlayerPage/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerPage/Player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
-    </list>
+    <list default="true" id="99208cde-e075-44df-a6c8-7eb6f2f87419" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="954" y="45" width="966" height="1000" extended-state="1" />
+    <frame x="948" y="163" width="966" height="1000" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.40652174" />
