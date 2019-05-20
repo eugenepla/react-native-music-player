@@ -7,13 +7,8 @@ export default class App extends Component {
   render() {
     return (
       <Router
-        navigationBarStyle={{
-          backgroundColor: '#022140'
-        }}
-        titleStyle={{
-          color: '#FFE400',
-          fontSize: 22
-        }}
+        navigationBarStyle={{ backgroundColor: '#022140' }}
+        titleStyle={{ color: '#FFE400', fontSize: 22 }}
         tintColor="#FFE400"
         headerLayoutPreset="center"
       >

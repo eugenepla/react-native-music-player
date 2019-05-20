@@ -18,7 +18,7 @@ class Player extends Component {
     this.playbackInstance = null
     this.state = {
       playbackInstanceArtist: null,
-      playbackInstanceName: LOADING_STRING,
+      playbackInstanceName: null,
       playbackInstancePosition: null,
       playbackInstanceDuration: null,
       shouldPlay: false,
@@ -50,7 +50,7 @@ class Player extends Component {
       this.playbackInstance = null
     }
 
-    const source = { uri: this.props.data[this.props.id - 1].url }
+    const source = { uri: this.props.data[this.index].url }
     const initialStatus = {
       shouldPlay: playing
     }
@@ -69,7 +69,7 @@ class Player extends Component {
     if (isLoading) {
       this.setState({
         isPlaying: false,
-        playbackInstanceName: LOADING_STRING,
+        playbackInstanceName: null,
         playbackInstanceArtist: null,
         playbackInstanceDuration: null,
         playbackInstancePosition: null,
@@ -77,9 +77,9 @@ class Player extends Component {
       })
     } else {
       this.setState({
-        playbackInstanceArtist: this.props.data[this.props.id - 1].artist,
-        playbackInstanceName: this.props.data[this.props.id - 1].song,
-        portrait: this.props.data[this.props.id - 1].cover,
+        playbackInstanceArtist: this.props.data[this.index].artist,
+        playbackInstanceName: this.props.data[this.index].song,
+        portrait: this.props.data[this.index].cover,
         isLoading: false
       })
     }
@@ -133,21 +133,21 @@ class Player extends Component {
 
   _onForwardPressed = () => {
     if (this.playbackInstance != null) {
-      Actions.refresh({
-        title: `${this.props.data[this.index + 1].artist} - ${
-          this.props.data[this.index + 1].song
-        }`
-      })
       this._advanceIndex(true)
       this._updatePlaybackInstanceForIndex(this.state.shouldPlay)
+      Actions.refresh({
+        title: `${this.props.data[this.index].artist} - ${
+          this.props.data[this.index].song
+        }`
+      })
     }
   }
 
   _onBackPressed = () => {
     if (this.playbackInstance != null) {
       Actions.refresh({
-        title: `${this.props.data[this.index - 1].artist} - ${
-          this.props.data[this.index - 1].song
+        title: `${this.props.data[this.index].artist} - ${
+          this.props.data[this.index].song
         }`
       })
       this._advanceIndex(false)
